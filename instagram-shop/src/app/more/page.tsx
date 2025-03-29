@@ -9,7 +9,7 @@ export default function MorePage() {
             <section>
               <h2 className="text-2xl font-semibold text-gray-900">About Us</h2>
               <p className="mt-4 text-gray-600">
-                Instagram Shop is your destination for trendy fashion and lifestyle products.
+                Ceads is your destination for trendy fashion and lifestyle products.
                 We curate the best items from around the world to bring you unique and
                 stylish pieces that make you stand out.
               </p>

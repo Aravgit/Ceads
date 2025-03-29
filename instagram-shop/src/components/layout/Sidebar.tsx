@@ -38,7 +38,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between p-4 border-b">
                 <Link href="/" className="text-xl font-bold text-pink-600">
-                  Instagram Shop
+                  Ceads
                 </Link>
                 <button
                   onClick={onClose}
