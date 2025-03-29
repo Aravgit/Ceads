@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 import ProductCard from './ProductCard';
 import { Product } from '@/lib/data';
 
@@ -11,20 +10,6 @@ export default function ProductGrid({ initialProducts }: ProductGridProps) {
   const [products, setProducts] = useState<Product[]>(initialProducts);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (
-        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100 &&
-        !loading
-      ) {
-        loadMoreProducts();
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [loading]);
 
   const loadMoreProducts = async () => {
     setLoading(true);
@@ -41,6 +26,20 @@ export default function ProductGrid({ initialProducts }: ProductGridProps) {
     setPage(prev => prev + 1);
     setLoading(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100 &&
+        !loading
+      ) {
+        loadMoreProducts();
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [loading, loadMoreProducts]);
 
   return (
     <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">

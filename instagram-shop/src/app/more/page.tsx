@@ -33,7 +33,7 @@ export default function MorePage() {
               <h2 className="text-2xl font-semibold text-gray-900">Contact Us</h2>
               <div className="mt-4 space-y-4">
                 <p className="text-gray-600">
-                  Have questions? We're here to help! Contact our customer service team:
+                  Have questions? We&apos;re here to help! Contact our customer service team:
                 </p>
                 <ul className="list-disc list-inside text-gray-600">
                   <li>Email: support@instagramshop.com</li>

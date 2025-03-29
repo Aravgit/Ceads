@@ -14,7 +14,7 @@ export default function PaymentPage() {
               Payment Successful!
             </h1>
             <p className="mt-4 text-base text-gray-500">
-              Thank you for your purchase. We'll send you a confirmation email with your order details.
+              Thank you for your purchase. We&apos;ll send you a confirmation email with your order details.
             </p>
             <div className="mt-8">
               <Link

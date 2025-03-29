@@ -31,7 +31,7 @@ export default function ReturnsPage() {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Returns & Exchanges</h2>
                 <p className="text-gray-900">
-                  We want you to be completely satisfied with your purchase. If you're not happy with your order,
+                  We want you to be completely satisfied with your purchase. If you&apos;re not happy with your order,
                   we accept returns within 30 days of delivery.
                 </p>
               </section>

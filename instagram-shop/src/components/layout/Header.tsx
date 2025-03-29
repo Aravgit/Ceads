@@ -23,9 +23,11 @@ export default function Header({ onMenuClick }: HeaderProps) {
           
           <div className="flex-1 flex justify-center">
             <Link href="/" className="flex items-center h-full py-2">
-              <img
+              <Image
                 src="/logo.svg"
                 alt="Ceads Logo"
+                width={60}
+                height={60}
                 className="h-15 w-auto"
               />
             </Link>
