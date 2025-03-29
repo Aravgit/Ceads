@@ -50,7 +50,7 @@ export default function ReturnsPage() {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Refund Process</h2>
                 <p className="text-gray-900">
-                  Once we receive your return, we'll inspect the item and process your refund within 5-7 business days.
+                  Once we receive your return, we&apos;ll inspect the item and process your refund within 5-7 business days.
                   The refund will be issued to the original payment method used for the purchase.
                 </p>
               </section>

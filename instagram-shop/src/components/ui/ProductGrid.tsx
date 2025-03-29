@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import ProductCard from './ProductCard';
 import { Product } from '@/lib/data';
 
@@ -11,7 +11,7 @@ export default function ProductGrid({ initialProducts }: ProductGridProps) {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
 
-  const loadMoreProducts = async () => {
+  const loadMoreProducts = useCallback(async () => {
     setLoading(true);
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -25,7 +25,7 @@ export default function ProductGrid({ initialProducts }: ProductGridProps) {
     setProducts(prev => [...prev, ...newProducts]);
     setPage(prev => prev + 1);
     setLoading(false);
-  };
+  }, [initialProducts, page]);
 
   useEffect(() => {
     const handleScroll = () => {
